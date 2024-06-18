@@ -444,10 +444,9 @@ footer .social-icons a {
         display: block;
         margin: 0 auto 10px auto;
         max-width: 100%;
-        /*
         order: 1;
         margin: 0 auto 10px auto;
-        max-width: 100%;*/
+        max-width: 100%;
     }
 
     nav ul {
@@ -457,21 +456,6 @@ footer .social-icons a {
 
     nav ul li {
         margin: 10px 0;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    li {
-        margin: 10px 0;
-    }
-
-    nav {
-        display: flex;
     }
 }
 

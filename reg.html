@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Regisztráció/Bejelentkezés</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Firm Info</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="inactive">Bemutatkozás</a></li>
+                    <li><a href="services.html" class="inactive">Szolgáltatások</a></li>
+                    <li><a href="firminfo.html" class="inactive">Céginformáció</a></li>
+                    <li><a href="blog.html" class="inactive">Blog</a></li>
+                    <li><a href="reg.html" class="active">Regisztráció/Bejelentkezés</a></li>
+                    <li><a href="contact.html" class="inactive">Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content form-container">
+        <form action="/">
+            <p class="form-text"><strong>A regisztrációhoz kérjük töltse ki az alábbi űrlapot</strong>
+            </p>
+
+            <fieldset>
+                <legend>Általános információk</legend>
+                <div class="form-field-inline">
+                    <div class="form-field">
+                        <label for="title">Titulus</label>
+                        <select id="title" name="combobox">
+                            <option value="none"></option>
+                            <option value="dr">Doktor</option>
+                            <option value="ifj">Ifjabb 2</option>
+                            <option value="id">Idősebb</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="name">Teljes név<span>*</span></label>
+                        <input id="name" type="text" name="text" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="bname">Születési név<span>*</span></label>
+                        <input id="bname" type="text" name="text" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="sex">Cég<span>*</span></label>
+                        <input id="sex" type="checkbox" name="checkbox" required>
+                    </div>
+                </div>
+                <div class="name-form-field">
+                    <div class="form-field">
+                        <label for="bdate">Születési idő<span>*</span></label>
+                        <input id="bdate" type="date" name="bdate" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="bplace">Születési hely<span>*</span></label>
+                        <input id="bplace" type="text" name="bplace" required>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="address">Cím<span>*</span></label>
+                    <input id="address" type="text" name="text" placeholder="Utca házszám" required>
+                </div>
+
+                <div class="form-field-inline">
+                    <div class="form-field">
+                        <input type="text" name="city" placeholder="Város" required>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" name="postcode" placeholder="Irányítószám" required>
+                    </div>
+                </div>
+
+            </fieldset>
+            <br>
+
+            <div class="btn-block">
+                <input type="reset" value="Reset" class="button-reset">
+                <button>JELENTKEZÉS</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="foot">
+            <p>&copy; 2024 FirmInfo. Minden jog fenntartva.</p>
+            <div class="social-logo">
+                <img src="img/facebook.svg" alt="fb-logo" width="30">
+                <img src="img/instagram.svg" alt="instagram-logo" width="30">
+                <img src="img/youtube.svg" alt="youtube-logo" height="30">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

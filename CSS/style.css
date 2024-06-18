@@ -1,0 +1,481 @@
+:root {
+    --primary-color: #7784bc;
+    --secondary-color: #0e0349;
+    --btn-background-color: #007BFF;
+    --body-color: #000;
+    --backgroundcolor: #fbfbfb;
+    --header-text-color: #fff;
+    --link-color: #fff;
+    --header-background-color: #8c9fe1;
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--body-color);
+    background-color: var(--backgroundcolor);
+    background-image: url("../img/hatter2.jpg");
+    background-size: cover;
+}
+
+header {
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    background: var(--secondary-color);
+    color: var(--header-text-color);
+}
+
+nav ul li a.inactive::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--secondary-color);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    z-index: 0;
+}
+
+nav ul li a.inactive:hover {
+    color: var(--secondary-color);
+}
+
+nav ul li a.inactive:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.for-print {
+
+    display: none;
+}
+
+.hero {
+    padding: 20px 0;
+    text-align: justify;
+}
+
+.hero .container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.content {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: auto;
+}
+
+.content p {
+    line-height: 1.875em;
+    font-size: 15px;
+}
+
+.mainpic {
+    float: right;
+    margin: 0 0 10px 20px;
+    max-width: 300px;
+    height: max-content;
+    z-index: 1;
+}
+
+#contact {
+    text-align: center;
+
+}
+
+.post {
+
+    padding: 10px;
+    margin: 10px;
+}
+
+/*Űrlap*/
+
+legend {
+    color: var(--link-color);
+    background-color: var(--primary-color);
+    padding: 3px 5px;
+    font-size: 20px;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 0 var(--primary-color);
+}
+
+
+input {
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    width: 100%;
+    padding: 5px;
+}
+/*
+input[type='checkbox'],
+[type='radio'] {
+    width: auto !important;
+} */
+
+select {
+    width: 100%;
+    padding: 7px 0;
+    background: transparent;
+}
+
+.form-field:hover p,
+.form-field:hover i,
+input:hover::placeholder {
+    color: var(--primary-color);
+}
+
+.form-field input:hover,
+textarea:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 6px 0 var(--primary-color);
+    color: var(--primary-color);
+}
+
+.form-field {
+    position: relative;
+    padding: 10px;
+}
+
+
+.form-field i {
+    right: 2%;
+    top: 30px;
+    z-index: 1;
+}
+
+
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
+
+button,
+.button-reset {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    font-size: 16px;
+    color: var(--link-color);
+    cursor: pointer;
+}
+
+.button-reset {
+    width: 100px !important;
+}
+
+.button-reset:hover {
+    background-color: var(--secondary-color);
+}
+
+ button:hover {
+    background-color: var(--secondary-color);
+}
+
+ .btn-search:hover {
+     background-color: var(--secondary-color);
+ }
+
+ .embedded-video video{
+     width: 300px;
+     height: 200px;
+ }
+
+.form-text {
+    margin-bottom: 1rem;
+}
+
+/*Táblázat*/
+
+.table-container {
+    max-width: calc(100% - 300px);
+    margin: auto;
+    padding: 5px;
+}
+
+.search {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.search label {
+    margin-right: 10px;
+}
+.search input[type="text"] {
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: calc(100% - 170px);
+}
+.search button {
+    background-color: var(--btn-background-color);
+    color: var(--link-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+.search button img {
+    width: 16px;
+    height: 16px;
+}
+table {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+th {
+    background-color: #a1b4f3;
+}
+tr:nth-child(odd) {
+    background-color: #dfd9d9;
+}
+
+
+
+footer {
+    background: var(--header-background-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer .wrapper {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+footer .social-icons {
+    margin: 10px 0;
+}
+
+footer .social-icons a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+/*Animálás*/
+
+.animated {
+    opacity: 0;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: var(--link-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#from-left {
+    animation-name: fromLeft;
+    animation-delay: 0.5s;
+}
+@keyframes fromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#from-right {
+    animation-name: fromRight;
+    animation-delay: 2s;
+}
+@keyframes fromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#from-down {
+    animation-name: fromDown;
+    animation-delay: 2s;
+}
+@keyframes fromDown {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#from-dot {
+      animation-name: fromDot;
+      animation-delay: 2.5s;
+
+}
+@keyframes fromDot {
+
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    50% {
+        opacity: 0.5;
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    header .wrapper {
+        flex-direction: column;
+    }
+
+    .foot {
+        flex-direction: column;
+    }
+
+    .mainpic {
+
+        float: none;
+        display: block;
+        margin: 0 auto 10px auto;
+        max-width: 100%;
+        /*
+        order: 1;
+        margin: 0 auto 10px auto;
+        max-width: 100%;*/
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #938d8d;
+        --secondary-color: #47474c;
+        --btn-background-color: #60626c;
+        --body-color: #dfd9d9;
+        --backgroundcolor: #3c3a3a;
+        --header-text-color: #fff;
+        --link-color: #fff;
+        --header-background-color: #938d8d;
+        --border-color: #ddd;
+
+    }
+
+    th {
+        background-color: var(--secondary-color);
+    }
+}
